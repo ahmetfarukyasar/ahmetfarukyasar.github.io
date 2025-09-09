@@ -68,9 +68,9 @@ function Navbar() {
           <Link to="contact" smooth={true} duration={600} offset={-80} onClick={() => setOpen(false)} className={link}>
             <Contact size={20} /> Contact
           </Link>
-          <button className="py-3 px-6 bg-[#040404] text-[#D7D9CE] rounded-xl hover:scale-105 transition">
+          <a href="" className="py-3 px-6 bg-[#040404] text-[#D7D9CE] rounded-xl hover:scale-105 transition">
             <CodeXml />
-          </button>
+          </a>
         </ul>
       )}
     </nav>
