@@ -8,14 +8,12 @@ import Contact from './components/Contact'
 
 function App() {
   return (
-    <div className='min-h-screen w-full max-w-full'>
+    <div className='min-h-screen w-full max-w-full overflow-x-hidden'>
       <Navbar />
-      <div className='overflow-x-hidden'>
-        <Welcome />
-        <About />
-        <Projects />
-        <Contact />
-      </div>
+      <Welcome />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   )
 }
