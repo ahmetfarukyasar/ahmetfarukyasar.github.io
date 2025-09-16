@@ -10,6 +10,11 @@ function Projects() {
       link: "https://github.com/ahmetfarukyasar/challengeMovieApp",
     },
     {
+      title: "Chat App",
+      desc: "Real-time chat application (React + Vite, Node.js, Express, Socket.IO, MongoDB, JWT)",
+      link: "https://github.com/ahmetfarukyasar/ChatApp",
+    },
+    {
       title: "Library Website",
       desc: "A web-based library management system built with Laravel.",
       link: "https://github.com/ahmetfarukyasar/librarycontrolsite",
