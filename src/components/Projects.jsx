@@ -1,33 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Dot, Github, PanelTop, Rss } from "lucide-react";
 
 function Projects() {
   const projects = [
     {
-      title: "Movie App",
+      title: "Is It Worth To Watch",
       desc: "A modern React application that lists movie data using the TMDB API.",
-      link: "https://github.com/ahmetfarukyasar/challengeMovieApp",
+      githubLink: "https://github.com/ahmetfarukyasar/IsItWTW",
+      liveLink: "https://isitwtw.vercel.app/"
+    },
+    {
+      title: "Chat App",
+      desc: "Real-time chat application (React + Vite, Node.js, Express, Socket.IO, MongoDB, JWT)",
+      githubLink: "https://github.com/ahmetfarukyasar/ChatApp",
+      liveLink: ""
     },
     {
       title: "Library Website",
       desc: "A web-based library management system built with Laravel.",
-      link: "https://github.com/ahmetfarukyasar/librarycontrolsite",
+      githubLink: "https://github.com/ahmetfarukyasar/librarycontrolsite",
+      liveLink: ""
     },
     {
       title: "Forum Website",
       desc: "A forum platform built with Laravel.",
-      link: "https://github.com/ahmetfarukyasar/webforum",
+      githubLink: "https://github.com/ahmetfarukyasar/webforum",
+      liveLink: ""
     },
     {
       title: "Taxi App",
       desc: "A taxi service system with authentication, driver management and more.",
-      link: "https://github.com/ahmetfarukyasar/saritaksi-website",
+      githubLink: "https://github.com/ahmetfarukyasar/saritaksi-website",
+      liveLink: ""
     },
     {
       title: "Maze Solver",
       desc: "A Python implementation of pathfinding algorithms for maze solving.",
-      link: "https://github.com/ahmetfarukyasar/maze-solver",
+      githubLink: "https://github.com/ahmetfarukyasar/maze-solver",
+      liveLink: ""
     }
   ];
 
@@ -60,10 +71,29 @@ function Projects() {
               <p className="text-base mb-6">{proj.desc}</p>
             </div>
             <a
-              href={proj.link}
+              href={proj.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 mt-auto bg-[#D7D9CE] text-[#040404] px-4 py-2 rounded-xl font-medium hover:bg-[#b6b8af] transition"
+              className={`flex items-center justify-between gap-2 mt-auto bg-[#DDC9B4] text-[#040404] px-4 py-2 rounded-xl font-medium hover:bg-[#cdbaa6] transition
+                ${proj.liveLink === "" ? "pointer-events-none opacity-50" : ""}`}
+            >
+              <div className="flex gap-2 items-center font-medium">
+                <Rss size={20} />
+                Live
+              </div>
+              <div>
+                {
+                  proj.liveLink === ""
+                  ? <div><Dot className="text-red-600"/></div>
+                  : <div><Dot className="text-green-600 animate-ping"/></div>
+                }
+              </div>
+            </a>
+            <a
+              href={proj.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 mt-2 bg-[#D7D9CE] text-[#040404] px-4 py-2 rounded-xl font-medium hover:bg-[#b6b8af] transition"
             >
               <Github size={20} />
               View on GitHub
