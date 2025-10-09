@@ -39,12 +39,10 @@ function Navbar() {
           </Link>
         </ul>
 
-        {/* Resume Button */}
-        <a href="https://www.github.com" className="hidden md:block py-3 px-4 bg-[#040404] text-[#D7D9CE] rounded-xl hover:scale-105 transition cursor-pointer">
+        <a href="https://www.github.com/" className="hidden md:block py-3 px-4 bg-[#040404] text-[#D7D9CE] rounded-xl hover:scale-105 transition cursor-pointer pointer-events-none opacity-50">
           <CodeXml />
         </a>
 
-        {/* Mobile Hamburger */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-[#040404]"
@@ -53,7 +51,6 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
         <ul className="flex flex-col gap-6 items-center bg-[#D7D9CE] py-6 md:hidden text-[#040404]">
           <Link to="welcome" smooth={true} duration={600} offset={-80} onClick={() => setOpen(false)} className={link}>
