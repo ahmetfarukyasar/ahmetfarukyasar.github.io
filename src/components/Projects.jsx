@@ -19,7 +19,7 @@ function Projects() {
     {
       title: "Library Website",
       desc: "A web-based library management system built with Laravel.",
-      githubLink: "https://github.com/ahmetfarukyasar/librarycontrolsite",
+      githubLink: "https://github.com/ahmetfarukyasar/librarycontrolsystem",
       liveLink: ""
     },
     {
